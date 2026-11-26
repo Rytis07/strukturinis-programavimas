@@ -7,7 +7,7 @@ using namespace std;
 
 const int MAX = 100;
 
-// 1. Duomenu nuskaitymas
+// skaito duomenys.
 bool nuskaitytiDuomenis(
     string kategorijos[],
     string pavadinimai[],
@@ -100,12 +100,12 @@ bool nuskaitytiDuomenis(
     return true;
 }
 
-// 2. Vienos prekes eilutes suma pries nuolaida
+// vienos prekes eilutes suma pries nuolaida
 double eilutesSuma(double kaina, int kiekis) {
     return kaina * kiekis;
 }
 
-// 3. Nuolaidos apskaiciavimas
+// Nuolaidos
 double nuolaida(double suma, int kiekis) {
     if (kiekis >= 10) {
         return suma * 0.10;
@@ -114,7 +114,7 @@ double nuolaida(double suma, int kiekis) {
     return 0.0;
 }
 
-// 4. Vienos prekes galutine suma
+// vienos prekes galutine suma
 double galutineEilutesSuma(double kaina, int kiekis) {
     double suma = eilutesSuma(kaina, kiekis);
     double nuolaidaEur = nuolaida(suma, kiekis);
@@ -122,7 +122,7 @@ double galutineEilutesSuma(double kaina, int kiekis) {
     return suma - nuolaidaEur;
 }
 
-// 5. Kategorijos suma po nuolaidu
+// suma po nuolaidu
 double kategorijosSuma(
     string kategorijos[],
     double kainos[],
@@ -141,7 +141,7 @@ double kategorijosSuma(
     return suma;
 }
 
-// 6. Visu prekiu perziura
+// visu prekiu perziura
 void rodytiPrekes(
     string kategorijos[],
     string pavadinimai[],
@@ -177,7 +177,7 @@ void rodytiPrekes(
     }
 }
 
-// 7. Pasirinktos kategorijos prekiu perziura
+// parinktos kategorijos prekiu perziura
 void rodytiKategorija(
     string kategorijos[],
     string pavadinimai[],
@@ -229,7 +229,7 @@ void rodytiKategorija(
     }
 }
 
-// 8. Viso uzsakymo sumu apskaiciavimas
+// viso uzsakymo sumu skaiciavimas
 void apskaiciuotiUzsakymoSumas(
     double kainos[],
     int kiekiai[],
@@ -252,7 +252,7 @@ void apskaiciuotiUzsakymoSumas(
     }
 }
 
-// 9. Uzsakymo sumu perziura
+// uzsakymo sumu perziura
 void rodytiUzsakymoSumas(
     double kainos[],
     int kiekiai[],
@@ -272,7 +272,7 @@ void rodytiUzsakymoSumas(
     cout << "Galutine suma:        " << galutine << " Eur\n";
 }
 
-// 10. Kategoriju suvestine
+// Kategoriju suvestine
 void rodytiKategorijuSumas(
     string kategorijos[],
     double kainos[],
@@ -301,7 +301,7 @@ void rodytiKategorijuSumas(
     }
 }
 
-// 11. Visa ataskaita
+//   atwaskaita
 void ataskaita(
     ostream &out,
     string kategorijos[],
@@ -369,7 +369,7 @@ void ataskaita(
     out << "\n========================================\n";
 }
 
-// 12. Ataskaitos issaugojimas
+// issaugojimas
 bool issaugotiAtaskaita(
     string kategorijos[],
     string pavadinimai[],
@@ -410,7 +410,6 @@ bool issaugotiAtaskaita(
     return true;
 }
 
-// MAIN
 int main() {
     string kategorijos[MAX];
     string pavadinimai[MAX];
